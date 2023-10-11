@@ -1,16 +1,22 @@
+/* eslint-disable arrow-body-style */
 import PropTypes from 'prop-types';
+import arrowImage from '../asset/arrowImg.svg';
 
 const MealsItem = ({
   image, title, amount, unit,
-}) => (
-  <div>
-    <img src={image} alt="meal" />
-    <h2>{title}</h2>
-    <p>{amount}</p>
-    <p>{unit}</p>
-    {/* <button onClick={() => }></button> */}
-  </div>
-);
+}) => {
+  return (
+    <div>
+      <img src={image} alt="meal" />
+      <h2>{title}</h2>
+      <p>{amount}</p>
+      <p>{unit}</p>
+      <button type="submit">
+        <img src={arrowImage} alt="arrow" />
+      </button>
+    </div>
+  );
+};
 
 MealsItem.propTypes = {
   // id: PropTypes.number.isRequired,
