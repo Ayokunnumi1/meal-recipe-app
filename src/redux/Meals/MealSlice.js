@@ -4,7 +4,7 @@ import axios from 'axios';
 // https://api.spoonacular.com/recipes/complexSearch?apiKey=a873ef0c03ae4bbe8b019be1504c0312&query=chicken soup&minCalories=50&maxCalories=100
 
 export const getDataFromServer = createAsyncThunk('meals/getDataFromServer', async () => {
-  const apiKey = 'a873ef0c03ae4bbe8b019be1504c0312';
+  const apiKey = '23baefd84da542e9bdc6f366e3c45ee0';
   const baseUrl = 'https://api.spoonacular.com/recipes/complexSearch';
   const query = 'chicken soup';
   try {
@@ -36,10 +36,10 @@ const mealSlice = createSlice({
         state.mealsData = action.payload.results.map((meal) => (
           {
             id: meal.id,
-            title: meal.title,
             image: meal.image,
-            amount: meal.nutrients,
-            // unit: meal.nutrients[0],
+            title: meal.title,
+            amount: meal.nutrition.nutrients[0].amount,
+            unit: meal.nutrition.nutrients[0].unit,
           }
         ));
       })

@@ -6,6 +6,7 @@ import { getDataFromServer } from '../redux/Meals/MealSlice';
 const Meals = () => {
   const { mealsData, loading, error } = useSelector((state) => state.meals);
   const trialStr = 'try me oh';
+  const meal = mealsData;
   const dispatch = useDispatch();
   console.log(mealsData);
 
@@ -27,17 +28,18 @@ const Meals = () => {
       </>
       )}
       {!loading && !error
-              && mealsData.map((meal) => (
-                <MealsItem
-                  trialStr={trialStr}
-                  key={meal?.id}
-                  id={meal?.id}
-                  image={meal?.image}
-                  title={meal?.title}
-                  amount={meal?.amount}
-                  unit={meal?.unit}
-                />
-              ))}
+        && mealsData
+      && (
+      <MealsItem
+        trialStr={trialStr}
+        key={meal?.id}
+        id={meal?.id}
+        image={meal?.image}
+        title={meal?.title}
+        amount={meal?.amount}
+        unit={meal?.unit}
+      />
+      )}
     </ul>
   );
 };
