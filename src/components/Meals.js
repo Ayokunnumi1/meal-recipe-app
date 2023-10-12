@@ -1,9 +1,15 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 import MealsItem from './MealsItem';
+import { forStyling } from '../redux/Meals/MealSlice';
 
 const Meals = () => {
   const { mealsData, loading, error } = useSelector((state) => state.meals);
+  const dispatch = useDispatch();
 
+  useEffect(() => {
+    dispatch(forStyling());
+  }, [dispatch]);
   return (
     <ul>
       {loading && (
