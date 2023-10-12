@@ -1,9 +1,9 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-// https://api.spoonacular.com/recipes/716429/information?apiKey=23baefd84da542e9bdc6f366e3c45ee0&includeNutrition=true
+// https://api.spoonacular.com/recipes/716429/information?apiKey=8c25d703bc9444b183e1cf68926709db&includeNutrition=true
 export const getMealsDetails = createAsyncThunk('mealsDetail/getMealsDetails', async (id) => {
   const baseUrl = `https://api.spoonacular.com/recipes/${id}/information`;
-  const apiKey = '50d5f08272bd47e1961ff4fa410416ac';
+  const apiKey = '8c25d703bc9444b183e1cf68926709db';
   try {
     const response = await axios.get(`${baseUrl}?apiKey=${apiKey}&includeNutrition=true`);
     const data = await response.data;
