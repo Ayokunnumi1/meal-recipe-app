@@ -3,7 +3,7 @@ import axios from 'axios';
 // https://api.spoonacular.com/recipes/716429/information?apiKey=8c25d703bc9444b183e1cf68926709db&includeNutrition=true
 export const getMealsDetails = createAsyncThunk('mealsDetail/getMealsDetails', async (id) => {
   const baseUrl = `https://api.spoonacular.com/recipes/${id}/information`;
-  const apiKey = '8c25d703bc9444b183e1cf68926709db';
+  const apiKey = '2d65b4801b2b4772b8e5bbbd4f17cec2';
   try {
     const response = await axios.get(`${baseUrl}?apiKey=${apiKey}&includeNutrition=true`);
     const data = await response.data;
@@ -41,7 +41,7 @@ const MealsDetailsSlice = createSlice({
       })
       .addCase(getMealsDetails.rejected, (state, action) => {
         state.loading = false;
-        state.error = action.payload;
+        state.error = action.error;
       });
   },
 });
