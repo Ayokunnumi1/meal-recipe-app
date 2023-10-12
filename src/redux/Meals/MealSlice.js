@@ -1,10 +1,8 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-// https://api.spoonacular.com/recipes/complexSearch?apiKey=a873ef0c03ae4bbe8b019be1504c0312&query=chicken soup&minCalories=50&maxCalories=100
-
 export const getDataFromServer = createAsyncThunk('meals/getDataFromServer', async () => {
-  const apiKey = '23baefd84da542e9bdc6f366e3c45ee0';
+  const apiKey = '8c25d703bc9444b183e1cf68926709db';
   const baseUrl = 'https://api.spoonacular.com/recipes/complexSearch';
   const query = 'chicken soup';
   try {
