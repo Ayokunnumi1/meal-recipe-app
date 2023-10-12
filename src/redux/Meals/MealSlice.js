@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 export const getDataFromServer = createAsyncThunk('meals/getDataFromServer', async () => {
-  const apiKey = '23baefd84da542e9bdc6f366e3c45ee0';
+  const apiKey = '50d5f08272bd47e1961ff4fa410416ac';
   const baseUrl = 'https://api.spoonacular.com/recipes/complexSearch';
   const query = 'chicken soup';
   try {

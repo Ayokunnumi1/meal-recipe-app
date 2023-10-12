@@ -6,7 +6,6 @@ import { getDataFromServer } from '../redux/Meals/MealSlice';
 const Meals = () => {
   const { mealsData, loading, error } = useSelector((state) => state.meals);
   const dispatch = useDispatch();
-  console.log(mealsData);
 
   useEffect(() => {
     dispatch(getDataFromServer());
