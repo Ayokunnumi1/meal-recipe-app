@@ -1,3 +1,10 @@
+.meals-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-content: center;
+  justify-content: center;
+}
+
 .msg-container {
   font-family: Roboto, sans-serif;
   font-size: 30px;
@@ -6,4 +13,22 @@
   margin: 50px 100px;
   text-align: center;
   color: #fff;
+}
+
+@media screen and (min-width: 500px) {
+  .meals-container {
+    display: grid;
+    padding: 10px;
+
+    /* width: 70%; */
+    grid-template-columns: auto auto auto auto;
+
+    /* gap: 0; */
+  }
+
+  .msg-container {
+    margin: 70px 120px;
+    display: flex;
+    width: 100%;
+  }
 }

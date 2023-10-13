@@ -1,0 +1,37 @@
+.meals-detail-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 60%;
+}
+
+td,
+th {
+  border: 1px solid #ddd;
+  text-align: center;
+  padding: 8px;
+  background-color: #ddd;
+}
+
+.arrow-left-btn {
+  background-color: #fff;
+  border-radius: 50%;
+  border: none;
+  margin-left: 20px;
+}
+
+/* tr:nth-child(even) {
+  background-color: #ddd;
+} */
+@media screen and (min-width: 500px) {
+  table {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
