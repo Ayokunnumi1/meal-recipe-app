@@ -59,7 +59,8 @@ h2 {
 
 @media screen and (min-width: 500px) {
   .arrow-img {
-    left: 220px;
+    left: 160px;
+    position: absolute;
   }
 
   .meal-text-container {
@@ -75,6 +76,11 @@ h2 {
     width: 200px;
     height: 190px;
     object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .meals-content {
+    width: 100%;
     border-radius: 10px;
   }
 }

@@ -17,7 +17,6 @@ const MealsDetails = () => {
   };
 
   useEffect(() => {
-    // Check if there's an error in mealsDetail before dispatching the action.
     if (mealsDetail.error) {
       dispatch(getMealsDetails(mealsDetail.id));
     }
@@ -38,30 +37,35 @@ const MealsDetails = () => {
               {mealInfo.image === undefined ? (<p style={{ color: 'white', fontSize: '20px' }}>No image</p>)
                 : (<img src={mealInfo.image} alt="meals" style={{ width: '200px' }} />)}
               <p style={{ color: 'white', fontFamily: 'Roboto', fontSize: '20px' }}>{mealInfo.title}</p>
-              <table>
-                <thead>
-                  <th>Name</th>
-                  <th>Amount</th>
-                  <th>Unit</th>
-                  <th>PercentOfDailyNeeds</th>
-                </thead>
-              </table>
-
-              {mealsDetail.nutrient ? (
-                mealsDetail.nutrient.map((nutrient) => (
-                  <table key={nutrient.id}>
-                    <tbody>
-                      <td>{nutrient.name}</td>
-                      <td>{nutrient.amount}</td>
-                      <td>{nutrient.unit}</td>
-                      <td>{nutrient.percentOfDailyNeeds}</td>
-                    </tbody>
-
+              <div className="table-section">
+                <div className="table-section-content">
+                  <table>
+                    <tr>
+                      <th>Name</th>
+                      <th>Amount</th>
+                      <th>Unit</th>
+                      <th>DailyNeeds</th>
+                    </tr>
+                    {mealsDetail.nutrient ? (
+                      mealsDetail.nutrient.map((nutrient) => (
+                        <tr key={nutrient.id}>
+                          <td>{nutrient.name}</td>
+                          <td>{nutrient.amount}</td>
+                          <td>{nutrient.unit}</td>
+                          <td>{nutrient.percentOfDailyNeeds}</td>
+                        </tr>
+                      ))
+                    ) : (
+                      <tr>
+                        <td colSpan="4" style={{ color: 'white' }}>
+                          No nutrients available
+                        </td>
+                      </tr>
+                    )}
                   </table>
-                ))
-              ) : (
-                <p style={{ color: 'white' }}>No nutrients available</p>
-              )}
+                </div>
+              </div>
+
             </div>
             )}
       </div>

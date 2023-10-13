@@ -27,17 +27,12 @@ const mealSlice = createSlice({
   initialState,
   reducers: {
     filterMeals: (state, action) => {
-      state.filteredMeals = state.mealsData.filter((meals) => meals.title.toLowerCase()
-        .startsWith(action.payload));
+      const searchValue = action.payload.toLowerCase();
+      state.filteredMeals = state.mealsData.filter((meal) => meal.title.toLowerCase()
+        .includes(searchValue));
     },
-    forStyling: (state) => {
-      state.mealsData = {
-        id: '1',
-        // image: pracImg,
-        title: 'chicken soup',
-        amount: 256,
-        unit: 'kcal',
-      };
+    resetFilter: (state) => {
+      state.mealsData = [];
     },
   },
   extraReducers: (builder) => {
@@ -64,4 +59,4 @@ const mealSlice = createSlice({
 });
 
 export default mealSlice.reducer;
-export const { filterMeals, forStyling } = mealSlice.actions;
+export const { filterMeals, resetFilter } = mealSlice.actions;

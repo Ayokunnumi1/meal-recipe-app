@@ -8,13 +8,26 @@
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: 60%;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.table-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-content: center;
+  height: 550px;
+}
+
+.table-section-content {
+  overflow-y: scroll;
 }
 
 td,
 th {
   border: 1px solid #ddd;
-  text-align: center;
+  text-align: left;
   padding: 8px;
   background-color: #ddd;
 }
@@ -24,14 +37,4 @@ th {
   border-radius: 50%;
   border: none;
   margin-left: 20px;
-}
-
-/* tr:nth-child(even) {
-  background-color: #ddd;
-} */
-@media screen and (min-width: 500px) {
-  table {
-    width: 70%;
-    margin: 0 auto;
-  }
 }
