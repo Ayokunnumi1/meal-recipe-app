@@ -1,8 +1,9 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+// import pracImg from './pracImg.png';
 
 export const getDataFromServer = createAsyncThunk('meals/getDataFromServer', async () => {
-  const apiKey = '8c25d703bc9444b183e1cf68926709db';
+  const apiKey = '9e1e79b93c7c466688288fad79f2a63e';
   const baseUrl = 'https://api.spoonacular.com/recipes/complexSearch';
   const query = 'chicken soup';
   try {
@@ -16,6 +17,7 @@ export const getDataFromServer = createAsyncThunk('meals/getDataFromServer', asy
 
 const initialState = {
   mealsData: [],
+  filteredMeals: [],
   loading: false,
   error: '',
 };
@@ -23,7 +25,21 @@ const initialState = {
 const mealSlice = createSlice({
   name: 'meals',
   initialState,
-  reducers: {},
+  reducers: {
+    filterMeals: (state, action) => {
+      state.filteredMeals = state.mealsData.filter((meals) => meals.title.toLowerCase()
+        .startsWith(action.payload));
+    },
+    forStyling: (state) => {
+      state.mealsData = {
+        id: '1',
+        // image: pracImg,
+        title: 'chicken soup',
+        amount: 256,
+        unit: 'kcal',
+      };
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getDataFromServer.pending, (state) => {
@@ -42,9 +58,10 @@ const mealSlice = createSlice({
         ));
       })
       .addCase(getDataFromServer.rejected, (state, action) => {
-        state.error = action.payload;
+        state.error = action.error;
       });
   },
 });
 
 export default mealSlice.reducer;
+export const { filterMeals, forStyling } = mealSlice.actions;
