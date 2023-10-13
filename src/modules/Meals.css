@@ -1,7 +1,9 @@
-.meals-container {
-  border: 3px solid red;
-  display: flex;
-  align-items: stretch;
-  flex-wrap: wrap;
-  width: 80%;
+.msg-container {
+  font-family: Roboto, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  width: 100%;
+  margin: 50px 100px;
+  text-align: center;
+  color: #fff;
 }

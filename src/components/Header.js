@@ -12,7 +12,10 @@ const Header = () => {
   };
   return (
     <header>
-      <img src={mealLogo} alt="meal logo" style={{ width: '60px', borderRadius: '50%' }} />
+      <div className="header-left">
+        <img src={mealLogo} alt="meal logo" style={{ width: '40px' }} />
+        <h1>Ayk foods</h1>
+      </div>
       <form onSubmit={searchMeals} id="form-input">
         <input
           type="text"

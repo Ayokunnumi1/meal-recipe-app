@@ -32,13 +32,13 @@ const MealsDetails = () => {
             <div key={mealInfo?.id} id={mealInfo?.id} className="">
               {mealInfo.image === undefined ? (<p>No image</p>)
                 : (<img src={mealInfo.image} alt="meals" />)}
-              <p>{mealInfo?.title}</p>
+              <p>{mealInfo.title}</p>
               {mealInfo.nutrients.map((nutrient) => (
                 <>
-                  <p>{nutrient?.name}</p>
-                  <p>{nutrient?.amount}</p>
-                  <p>{nutrient?.unit}</p>
-                  <p>{nutrient?.percentOfDailyNeeds}</p>
+                  <p>{nutrient.name}</p>
+                  <p>{nutrient.amount}</p>
+                  <p>{nutrient.unit}</p>
+                  <p>{nutrient.percentOfDailyNeeds}</p>
                 </>
               ))}
             </div>

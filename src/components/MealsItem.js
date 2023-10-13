@@ -14,17 +14,21 @@ const MealsItem = ({
     dispatch(getMealsDetails(buttonId));
   };
   return (
-    <div className="meals-item-container">
-      <img src={image} alt="meal" />
-      <h2>{title}</h2>
-      <p>{amount}</p>
-      <p>{unit}</p>
-      <Link to="/mealsDetails">
-        <button onClick={() => getButtonId(id)} type="submit">
-          <img src={arrowImage} alt="arrow" />
-        </button>
-      </Link>
-    </div>
+    <section>
+      <div className="meals-content">
+        <Link to="/mealsDetails">
+          <img src={image} alt="meal" className="meal-img" />
+          <div className="meal-text-container">
+            <h2>{title}</h2>
+            <p className="meal-amt">{amount}</p>
+            <p className="meal-unit">{unit}</p>
+          </div>
+          <button onClick={() => getButtonId(id)} type="submit" className="arrow-img">
+            <img src={arrowImage} alt="arrow" />
+          </button>
+        </Link>
+      </div>
+    </section>
   );
 };
 

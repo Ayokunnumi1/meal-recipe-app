@@ -6,18 +6,18 @@ const Meals = () => {
   const { mealsData, loading, error } = useSelector((state) => state.meals);
 
   return (
-    <ul className="meals-container">
+    <section className="meals-container">
       {loading && (
-        <>
-          <p>Loading...</p>
-          <p>Please wait...</p>
-        </>
+        <div className="msg-container">
+          <p className="loading">Loading...</p>
+          <p className="please-wait">please wait</p>
+        </div>
       )}
       {error && (
-      <>
-        <p>Error</p>
+      <div className="msg-container">
+        <p>Error!</p>
         <p>Try again later</p>
-      </>
+      </div>
       )}
       {!loading && !error
         && mealsData.map((meal) => (
@@ -30,7 +30,7 @@ const Meals = () => {
             unit={meal?.unit}
           />
         ))}
-    </ul>
+    </section>
   );
 };
 
