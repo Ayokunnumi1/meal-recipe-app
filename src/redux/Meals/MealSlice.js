@@ -25,16 +25,7 @@ const initialState = {
 const mealSlice = createSlice({
   name: 'meals',
   initialState,
-  reducers: {
-    filterMeals: (state, action) => {
-      const searchValue = action.payload.toLowerCase();
-      state.filteredMeals = state.mealsData.filter((meal) => meal.title.toLowerCase()
-        .includes(searchValue));
-    },
-    resetFilter: (state) => {
-      state.mealsData = [];
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(getDataFromServer.pending, (state) => {
@@ -59,4 +50,4 @@ const mealSlice = createSlice({
 });
 
 export default mealSlice.reducer;
-export const { filterMeals, resetFilter } = mealSlice.actions;
+export const { filterMeals } = mealSlice.actions;

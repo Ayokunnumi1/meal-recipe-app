@@ -4,7 +4,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 90px;
   padding: 10px;
 }
 
@@ -16,6 +16,13 @@ header {
   padding: 0;
 }
 
+.nutrient-header {
+  color: #fff;
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+  font-style: italic;
+}
+
 h1 {
   font-family: Roboto, sans-serif;
   font-style: italic;
@@ -24,7 +31,7 @@ h1 {
   color: #fff;
 }
 
-#user-input {
+/* #user-input {
   border-radius: 10px;
   padding: 5px;
   width: 250px;
@@ -38,4 +45,4 @@ h1 {
   font-family: Dancing-Script, sans-serif;
   font-style: italic;
   color: #fff;
-}
+} */
