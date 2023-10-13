@@ -3,7 +3,7 @@ import axios from 'axios';
 // import pracImg from './pracImg.png';
 
 export const getDataFromServer = createAsyncThunk('meals/getDataFromServer', async () => {
-  const apiKey = '9e1e79b93c7c466688288fad79f2a63e';
+  const apiKey = 'b6a8ec4b85604891850fd61b840183d2';
   const baseUrl = 'https://api.spoonacular.com/recipes/complexSearch';
   const query = 'chicken soup';
   try {
@@ -25,21 +25,7 @@ const initialState = {
 const mealSlice = createSlice({
   name: 'meals',
   initialState,
-  reducers: {
-    filterMeals: (state, action) => {
-      state.filteredMeals = state.mealsData.filter((meals) => meals.title.toLowerCase()
-        .startsWith(action.payload));
-    },
-    forStyling: (state) => {
-      state.mealsData = {
-        id: '1',
-        // image: pracImg,
-        title: 'chicken soup',
-        amount: 256,
-        unit: 'kcal',
-      };
-    },
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(getDataFromServer.pending, (state) => {
@@ -64,4 +50,4 @@ const mealSlice = createSlice({
 });
 
 export default mealSlice.reducer;
-export const { filterMeals, forStyling } = mealSlice.actions;
+export const { filterMeals } = mealSlice.actions;

@@ -1,15 +1,18 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-// https://api.spoonacular.com/recipes/716429/information?apiKey=8c25d703bc9444b183e1cf68926709db&includeNutrition=true
+// https://api.spoonacular.com/recipes/716429/information?apiKey=9e1e79b93c7c466688288fad79f2a63e&includeNutrition=true
 export const getMealsDetails = createAsyncThunk('mealsDetail/getMealsDetails', async (id) => {
   const baseUrl = `https://api.spoonacular.com/recipes/${id}/information`;
-  const apiKey = '9e1e79b93c7c466688288fad79f2a63e';
+  const apiKey = 'b6a8ec4b85604891850fd61b840183d2';
+  // b6a8ec4b85604891850fd61b840183d2
+  // omololuayk 9e1e79b93c7c466688288fad79f2a63e
   try {
     const response = await axios.get(`${baseUrl}?apiKey=${apiKey}&includeNutrition=true`);
     const data = await response.data;
     return data;
   } catch (error) {
-    return error.message;
+    console.error('Error in getMealsDetails:', error);
+    return { error: true };
   }
 });
 
@@ -41,7 +44,7 @@ const MealsDetailsSlice = createSlice({
       })
       .addCase(getMealsDetails.rejected, (state, action) => {
         state.loading = false;
-        state.error = action.error;
+        state.error = action.error.message;
       });
   },
 });

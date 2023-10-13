@@ -1,0 +1,40 @@
+.meals-detail-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.table-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-content: center;
+  height: 550px;
+}
+
+.table-section-content {
+  overflow-y: scroll;
+}
+
+td,
+th {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+  background-color: #ddd;
+}
+
+.arrow-left-btn {
+  background-color: #fff;
+  border-radius: 50%;
+  border: none;
+  margin-left: 20px;
+}

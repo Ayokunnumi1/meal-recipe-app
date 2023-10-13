@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import arrowImage from '../asset/arrowImg.svg';
 import { getMealsDetails } from '../redux/Details/DetailSlice';
+import '../modules/MealsItem.css';
 
 const MealsItem = ({
   id,
@@ -13,17 +14,25 @@ const MealsItem = ({
     dispatch(getMealsDetails(buttonId));
   };
   return (
-    <div>
-      <img src={image} alt="meal" />
-      <h2>{title}</h2>
-      <p>{amount}</p>
-      <p>{unit}</p>
-      <Link to="/mealsDetails">
-        <button onClick={() => getButtonId(id)} type="submit">
-          <img src={arrowImage} alt="arrow" />
-        </button>
-      </Link>
-    </div>
+    <section className="">
+      <button onClick={() => getButtonId(id)} type="submit" className="meals-content">
+        <div className="">
+          <Link to="/mealsDetails">
+            <div>
+              <img src={image} alt="meal" className="meal-img" />
+              <div className="meal-text-container">
+                <h2>{title}</h2>
+                <p className="meal-amt">{amount}</p>
+                <p className="meal-unit">{unit}</p>
+              </div>
+              <div className="arrow-img">
+                <img src={arrowImage} alt="arrow" />
+              </div>
+            </div>
+          </Link>
+        </div>
+      </button>
+    </section>
   );
 };
 
