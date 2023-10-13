@@ -29,7 +29,7 @@ const MealsDetails = () => {
         {error && <p>Error...</p>}
         {!loading && !error && mealsDetail
             && (
-            <div key={mealInfo?.id} id={mealInfo?.id}>
+            <div key={mealInfo?.id} id={mealInfo?.id} className="">
               {mealInfo.image === undefined ? (<p>No image</p>)
                 : (<img src={mealInfo.image} alt="meals" />)}
               <p>{mealInfo?.title}</p>

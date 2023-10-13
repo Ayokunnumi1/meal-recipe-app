@@ -1,17 +1,12 @@
-import { useSelector, useDispatch } from 'react-redux';
-import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import MealsItem from './MealsItem';
-import { forStyling } from '../redux/Meals/MealSlice';
+import '../modules/Meals.css';
 
 const Meals = () => {
   const { mealsData, loading, error } = useSelector((state) => state.meals);
-  const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(forStyling());
-  }, [dispatch]);
   return (
-    <ul>
+    <ul className="meals-container">
       {loading && (
         <>
           <p>Loading...</p>

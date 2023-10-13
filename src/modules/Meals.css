@@ -1,0 +1,7 @@
+.meals-container {
+    border: 3px solid red;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    width: 80%
+}

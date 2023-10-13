@@ -1,5 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { filterMeals } from '../redux/Meals/MealSlice';
+import mealLogo from '../asset/meal logo.png';
+import '../modules/Header.css';
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -10,12 +12,12 @@ const Header = () => {
   };
   return (
     <header>
-      <h1>Ayk Foods</h1>
-      <form onSubmit={searchMeals}>
+      <img src={mealLogo} alt="meal logo" style={{ width: '60px', borderRadius: '50%' }} />
+      <form onSubmit={searchMeals} id="form-input">
         <input
           type="text"
-          placeholder="type chicken soup"
-          id=""
+          placeholder="find chicken soup"
+          id="user-input"
           name="searchInput"
         />
       </form>

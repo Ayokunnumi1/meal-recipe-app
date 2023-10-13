@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { getDataFromServer } from './redux/Meals/MealSlice';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import Meals from './components/Meals';
 import MealsDetails from './components/MealDetail';
 import Header from './components/Header';
