@@ -4,7 +4,6 @@ import '../modules/Meals.css';
 
 const Meals = () => {
   const { mealsData, loading, error } = useSelector((state) => state.meals);
-  console.log(mealsData, mealsData.id);
   return (
     <section className="meals-container">
       {loading && (

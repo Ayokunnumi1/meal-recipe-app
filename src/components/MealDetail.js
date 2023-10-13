@@ -8,19 +8,18 @@ import '../modules/MealDetail.css';
 const MealsDetails = () => {
   const { loading, error, mealsDetail } = useSelector((state) => state.mealsDetail);
   const dispatch = useDispatch();
-  console.log(mealsDetail);
   const mealInfo = {
-    id: mealsDetail.id,
-    image: mealsDetail.images,
-    title: mealsDetail.title,
-    nutrients: mealsDetail.nutrient,
+    id: mealsDetail?.id,
+    image: mealsDetail?.images,
+    title: mealsDetail?.title,
+    nutrients: mealsDetail?.nutrient,
   };
 
   useEffect(() => {
-    if (mealsDetail.error) {
-      dispatch(getMealsDetails(mealsDetail.id));
+    if (mealsDetail?.error) {
+      dispatch(getMealsDetails(mealsDetail?.id));
     }
-  }, [dispatch, mealsDetail.id, mealsDetail.error]);
+  }, [dispatch, mealsDetail?.id, mealsDetail?.error]);
   return (
     <div>
       <Link to="/">
