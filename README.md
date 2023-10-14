@@ -76,7 +76,7 @@
 
 > Add a link to your deployed project.
 
-- [Live Demo Link](https://ayo-on-code-meal-app.onrender.com/)
+- [Live Demo Link](https://ayo-on-code-meal-recipe.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
