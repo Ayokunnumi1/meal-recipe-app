@@ -15,7 +15,7 @@ const Meals = () => {
       {error && (
       <div className="msg-container">
         <p>Error!</p>
-        <p>Try again later</p>
+        <p style={{ color: 'white' }}>Try again later</p>
       </div>
       )}
       {!loading && !error
