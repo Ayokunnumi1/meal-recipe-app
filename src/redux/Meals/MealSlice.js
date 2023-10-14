@@ -31,7 +31,7 @@ const initialState = {
   mealsData: [],
   searchMeals: [],
   loading: false,
-  error: null,
+  error: '',
 };
 
 const mealSlice = createSlice({
@@ -56,8 +56,7 @@ const mealSlice = createSlice({
         ));
       })
       .addCase(getDataFromServer.rejected, (state, action) => {
-        state.loading = false;
-        state.error = action.error.message;
+        state.error = action.error;
       })
       .addCase(searchDataFromServer.pending, (state) => {
         state.loading = true;
@@ -75,8 +74,7 @@ const mealSlice = createSlice({
         ));
       })
       .addCase(searchDataFromServer.rejected, (state, action) => {
-        state.loading = false;
-        state.error = action.error.message;
+        state.error = action.error;
       });
   },
 });
