@@ -1,6 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-// import pracImg from './pracImg.png';
 
 export const getDataFromServer = createAsyncThunk('meals/getDataFromServer', async () => {
   const apiKey = 'b6a8ec4b85604891850fd61b840183d2';
