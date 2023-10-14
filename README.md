@@ -83,7 +83,7 @@
 
 ## Presentation Video <a name="video-presentation"></a>
 
-- [Presentation Video Link](https://www.loom.com/share/7afeeb382b5146a2b118fa1f6ef19625?sid=82ce0ea9-f766-44de-9cea-e69ce90fecd9)
+- [Presentation Video Link](https://www.loom.com/share/0e7f2b38c09949a4a3ba888b01543769?sid=b8349fd4-8efd-415b-8ca3-62f7d91e5341)
 
 
 <!-- GETTING STARTED -->
@@ -98,6 +98,8 @@ git@github.com:Ayokunnumi1/meal-recipe-app.git
 ```
 
 <!-- SETUP -->
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Setup
 
@@ -120,6 +122,8 @@ npm start
 
 Install this project with node modules and npm.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ### Usage
 
 To run the project, execute the following command:
@@ -127,6 +131,7 @@ To run the project, execute the following command:
 ```sh
 npm start
 ```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Run tests
 
@@ -139,8 +144,6 @@ npm run test
 <!-- ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Live Demo Link]() -->
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

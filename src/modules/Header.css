@@ -1,10 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@200;300;400;500;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,400;1,500&display=swap');
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 header {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 90px;
+  gap: 20px;
   padding: 10px;
 }
 
@@ -31,7 +39,7 @@ h1 {
   color: #fff;
 }
 
-/* #user-input {
+#user-input {
   border-radius: 10px;
   padding: 5px;
   width: 250px;
@@ -45,4 +53,4 @@ h1 {
   font-family: Dancing-Script, sans-serif;
   font-style: italic;
   color: #fff;
-} */
+}

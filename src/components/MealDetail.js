@@ -28,14 +28,21 @@ const MealsDetails = () => {
         </button>
       </Link>
       <div>
-        {loading && <p>Loading!</p>}
-        {error && <p>Error...</p>}
+        {loading && <p style={{ color: 'white' }}>Loading!</p>}
+        {error && <p style={{ color: 'white' }}>Error...</p>}
         {!loading && !error && mealsDetail
             && (
-            <div key={mealInfo?.id} id={mealInfo?.id} className="meals-detail-content">
-              {mealInfo.image === undefined ? (<p style={{ color: 'white', fontSize: '20px' }}>No image</p>)
-                : (<img src={mealInfo.image} alt="meals" style={{ width: '200px' }} />)}
-              <p style={{ color: 'white', fontFamily: 'Roboto', fontSize: '20px' }}>{mealInfo.title}</p>
+            <div key={mealInfo?.id} id={mealInfo?.id} className="meals-detail-container">
+              <div className="meal-detail-content">
+                {mealInfo.image === undefined ? (<p style={{ color: 'white', fontSize: '20px' }}>No image</p>)
+                  : (<img src={mealInfo.image} alt="meals" style={{ width: '100px' }} />)}
+                <p style={{
+                  color: 'white', fontFamily: 'Roboto', fontSize: '15px', textAlign: 'center',
+                }}
+                >
+                  {mealInfo.title}
+                </p>
+              </div>
               <div className="table-section">
                 <div className="table-section-content">
                   <table>
