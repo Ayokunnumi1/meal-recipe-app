@@ -1,8 +1,14 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .meals-container {
   display: grid;
   grid-template-columns: 50% 50%;
-  align-content: center;
-  justify-content: center;
 }
 
 .msg-container {
@@ -18,8 +24,12 @@
 @media screen and (min-width: 500px) {
   .meals-container {
     display: grid;
-    padding: 10px;
-    grid-template-columns: auto auto auto auto;
+    gap: 0;
+    width: 80%;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    align-content: start;
   }
 
   .msg-container {
