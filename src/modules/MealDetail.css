@@ -11,12 +11,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 
 .meal-detail-content {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  gap: 20px;
 }
 
 table {
@@ -53,8 +55,13 @@ th {
   margin-left: 20px;
 }
 
-@media screen and (min-width: 500px) {
+/* @media screen and (min-width: 500px) {
   table {
-    width: 100%;
+    width: 80%;
+    margin: 0;
   }
-}
+
+    .table-section {
+      justify-content: center;
+    }
+} */

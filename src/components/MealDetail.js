@@ -35,8 +35,13 @@ const MealsDetails = () => {
             <div key={mealInfo?.id} id={mealInfo?.id} className="meals-detail-container">
               <div className="meal-detail-content">
                 {mealInfo.image === undefined ? (<p style={{ color: 'white', fontSize: '20px' }}>No image</p>)
-                  : (<img src={mealInfo.image} alt="meals" style={{ width: '200px' }} />)}
-                <p style={{ color: 'white', fontFamily: 'Roboto', fontSize: '30px' }}>{mealInfo.title}</p>
+                  : (<img src={mealInfo.image} alt="meals" style={{ width: '100px' }} />)}
+                <p style={{
+                  color: 'white', fontFamily: 'Roboto', fontSize: '15px', textAlign: 'center',
+                }}
+                >
+                  {mealInfo.title}
+                </p>
               </div>
               <div className="table-section">
                 <div className="table-section-content">

@@ -4,7 +4,7 @@ import { searchDataFromServer } from '../redux/Meals/MealSlice';
 import '../modules/Header.css';
 
 const Header = () => {
-  const { searchMeals } = useSelector((state) => state.meals);
+  const { error } = useSelector((state) => state.meals);
   const dispatch = useDispatch();
   const handleSearchMeals = (e) => {
     const searchValue = e.target.elements.searchInput.value;
@@ -12,7 +12,6 @@ const Header = () => {
     dispatch(searchDataFromServer(searchValue));
     e.target.elements.searchInput.value = '';
   };
-  console.log(searchMeals);
   return (
     <header>
       <div className="header-left">
@@ -27,6 +26,7 @@ const Header = () => {
           name="searchInput"
         />
       </form>
+      {error && <p style={{ color: 'white' }}>Meal Recipe Not Found</p>}
     </header>
   );
 };
