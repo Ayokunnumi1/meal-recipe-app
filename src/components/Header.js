@@ -1,25 +1,28 @@
-import { useDispatch } from 'react-redux';
-import { filterMeals } from '../redux/Meals/MealSlice';
+import { useDispatch, useSelector } from 'react-redux';
 import mealLogo from '../asset/meal logo.png';
+import { searchDataFromServer } from '../redux/Meals/MealSlice';
 import '../modules/Header.css';
 
 const Header = () => {
+  const { searchMeals } = useSelector((state) => state.meals);
   const dispatch = useDispatch();
-  const searchMeals = (e) => {
+  const handleSearchMeals = (e) => {
     const searchValue = e.target.elements.searchInput.value;
     e.preventDefault();
-    dispatch(filterMeals(searchValue));
+    dispatch(searchDataFromServer(searchValue));
+    e.target.elements.searchInput.value = '';
   };
+  console.log(searchMeals);
   return (
     <header>
       <div className="header-left">
         <img src={mealLogo} alt="meal logo" style={{ width: '40px' }} />
         <h1>Ayk foods</h1>
       </div>
-      <form onSubmit={searchMeals} id="form-input">
+      <form onSubmit={handleSearchMeals} id="form-input">
         <input
           type="text"
-          placeholder="find chicken soup"
+          placeholder="search meal recipe by name"
           id="user-input"
           name="searchInput"
         />
