@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 export const getDataFromServer = createAsyncThunk('meals/getDataFromServer', async () => {
-  const apiKey = 'b6a8ec4b85604891850fd61b840183d2';
+  const apiKey = '2d65b4801b2b4772b8e5bbbd4f17cec2';
   const baseUrl = 'https://api.spoonacular.com/recipes/complexSearch';
   const query = 'chicken soup';
   try {
@@ -15,7 +15,7 @@ export const getDataFromServer = createAsyncThunk('meals/getDataFromServer', asy
 });
 
 export const searchDataFromServer = createAsyncThunk('meals/searchDataFromServer', async (search) => {
-  const apiKey = 'b6a8ec4b85604891850fd61b840183d2';
+  const apiKey = '2d65b4801b2b4772b8e5bbbd4f17cec2';
   const baseUrl = 'https://api.spoonacular.com/recipes/complexSearch';
   const query = search;
   try {

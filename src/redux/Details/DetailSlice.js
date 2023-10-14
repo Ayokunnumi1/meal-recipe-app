@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export const getMealsDetails = createAsyncThunk('mealsDetail/getMealsDetails', async (id) => {
   const baseUrl = `https://api.spoonacular.com/recipes/${id}/information`;
-  const apiKey = 'b6a8ec4b85604891850fd61b840183d2';
+  const apiKey = '2d65b4801b2b4772b8e5bbbd4f17cec2';
   try {
     const response = await axios.get(`${baseUrl}?apiKey=${apiKey}&includeNutrition=true`);
     const data = await response.data;
