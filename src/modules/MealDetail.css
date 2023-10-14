@@ -14,12 +14,12 @@
   gap: 20px;
 }
 
-.meal-detail-content {
+/* .meal-detail-content {
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 20px;
-}
+} */
 
 table {
   font-family: arial, sans-serif;
@@ -53,4 +53,10 @@ th {
   border-radius: 50%;
   border: none;
   margin-left: 20px;
+}
+
+@media screen and (min-width: 500px) {
+  .table-section-content {
+    overflow: hidden;
+  }
 }
