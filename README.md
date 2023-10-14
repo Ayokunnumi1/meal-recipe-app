@@ -83,7 +83,7 @@
 
 ## Presentation Video <a name="video-presentation"></a>
 
-- [Presentation Video Link](https://www.loom.com/share/7afeeb382b5146a2b118fa1f6ef19625?sid=82ce0ea9-f766-44de-9cea-e69ce90fecd9)
+- [Presentation Video Link](https://www.loom.com/share/0e7f2b38c09949a4a3ba888b01543769?sid=b8349fd4-8efd-415b-8ca3-62f7d91e5341)
 
 
 <!-- GETTING STARTED -->
