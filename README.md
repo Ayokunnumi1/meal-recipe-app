@@ -99,6 +99,8 @@ git@github.com:Ayokunnumi1/meal-recipe-app.git
 
 <!-- SETUP -->
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ### Setup
 
 To setup this project, run this command:
@@ -120,6 +122,8 @@ npm start
 
 Install this project with node modules and npm.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ### Usage
 
 To run the project, execute the following command:
@@ -127,6 +131,7 @@ To run the project, execute the following command:
 ```sh
 npm start
 ```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Run tests
 
@@ -139,8 +144,6 @@ npm run test
 <!-- ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Live Demo Link]() -->
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

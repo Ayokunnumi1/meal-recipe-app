@@ -15,7 +15,7 @@ export const getDataFromServer = createAsyncThunk('meals/getDataFromServer', asy
 });
 
 export const searchDataFromServer = createAsyncThunk('meals/searchDataFromServer', async (search) => {
-  const apiKey = '9e1e79b93c7c466688288fad79f2a63e';
+  const apiKey = 'b6a8ec4b85604891850fd61b840183d2';
   const baseUrl = 'https://api.spoonacular.com/recipes/complexSearch';
   const query = search;
   try {
@@ -80,4 +80,3 @@ const mealSlice = createSlice({
 });
 
 export default mealSlice.reducer;
-// export const { filterMeals } = mealSlice.actions;
