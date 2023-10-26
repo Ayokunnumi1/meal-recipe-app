@@ -21,7 +21,16 @@
   color: #fff;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (max-width: 700px){
+  .meals-container {
+    display: grid;
+    column-gap: 0;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media screen and (min-width: 768px) {
   .meals-container {
     display: grid;
     gap: 0;
