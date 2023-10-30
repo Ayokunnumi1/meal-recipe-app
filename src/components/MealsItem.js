@@ -17,15 +17,24 @@ const MealsItem = ({
   return (
     <section className="">
       <Link to="/mealsDetails">
-       
-        <button className="meals-details-btn" onClick={() => getButtonId(id)} type="submit"style={{
-    backgroundImage: `url(${image})`
-  }} >
+
+        <button
+          className="meals-details-btn"
+          onClick={() => getButtonId(id)}
+          type="submit"
+          style={{
+            backgroundImage: `url(${image})`,
+          }}
+        >
           <div className="meal-text">
             <div className="meal-text-container">
-              <span className='meal-text-text'>
-              <h2>{title}</h2>
-              <p className="meal-amt">{amount}  <span>{unit}</span></p>
+              <span className="meal-text-text">
+                <h2>{title}</h2>
+                <p className="meal-amt">
+                  {amount}
+                  {' '}
+                  <span>{unit}</span>
+                </p>
               </span>
               <div className="arrow-img">
                 <img src={arrowImage} alt="arrow" />

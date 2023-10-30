@@ -29,7 +29,7 @@ export const searchDataFromServer = createAsyncThunk('meals/searchDataFromServer
 
 const initialState = {
   mealsData: [],
-  searchMeals: [],
+  filterMealsData: [],
   loading: false,
   error: '',
 };

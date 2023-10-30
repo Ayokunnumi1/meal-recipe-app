@@ -64,14 +64,12 @@ h2 {
   margin: 0;
 }
 
-
-@media screen and (max-width: 700px){
-
+@media screen and (max-width: 700px) {
   .meals-details-btn {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-   max-width:190px;
+    max-width: 190px;
     height: 150px;
   }
 
@@ -94,7 +92,7 @@ h2 {
     display: flex;
     flex-direction: column;
   }
-  
+
   .meal-text-container {
     padding: 5px;
     height: 60px;
@@ -107,9 +105,7 @@ h2 {
     top: 37%;
     right: 2px;
     width: 22px;
-   
   }
-
 }
 
 @media screen and (min-width: 768px) {
@@ -118,7 +114,6 @@ h2 {
     display: flex;
     width: 100%;
   }
-
 
   .meals-details-btn {
     width: 270px;
@@ -142,7 +137,6 @@ h2 {
     display: flex;
     position: absolute;
     top: 65%;
-   
   }
 
   .meal-text-container h2 {
@@ -151,7 +145,6 @@ h2 {
     font-size: 17px;
     width: 220px;
   }
-
 
   .meal-img {
     width: 200px;
