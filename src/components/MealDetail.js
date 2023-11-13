@@ -37,7 +37,7 @@ const MealsDetails = () => {
                 {mealInfo.image === undefined ? (<p style={{ color: 'white', fontSize: '20px' }}>No image</p>)
                   : (<img src={mealInfo.image} alt="meals" style={{ width: '200px', marginLeft: '30px' }} />)}
                 <p style={{
-                  color: 'white', fontFamily: 'Roboto', fontSize: '15px', textAlign: 'center',
+                  color: 'black', fontFamily: 'Roboto', fontSize: '15px', textAlign: 'center',
                 }}
                 >
                   {mealInfo.title}

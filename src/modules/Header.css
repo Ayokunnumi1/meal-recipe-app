@@ -25,7 +25,7 @@ header {
 }
 
 .nutrient-header {
-  color: #fff;
+  /* color: #fff; */
   font-family: Roboto, sans-serif;
   font-size: 20px;
   font-style: italic;
@@ -36,7 +36,7 @@ h1 {
   font-style: italic;
   font-size: 15px;
   font-weight: 500;
-  color: #fff;
+  /* color: #fff; */
 }
 
 #user-input {
@@ -44,13 +44,13 @@ h1 {
   padding: 5px;
   width: 250px;
   outline: none;
-  color: #fff;
-  background-color: rgba(36, 37, 42);
+  /* color: #fff; */
+  /* background-color: rgba(36, 37, 42); */
 }
 
 #user-input::placeholder {
   text-align: center;
   font-family: Dancing-Script, sans-serif;
   font-style: italic;
-  color: #fff;
+  /* color: black; */
 }

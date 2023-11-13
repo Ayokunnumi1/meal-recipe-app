@@ -1,13 +1,11 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import arrowImage from '../asset/arrowImg.svg';
 import { getMealsDetails } from '../redux/Details/DetailSlice';
 import '../modules/MealsItem.css';
 
 const MealsItem = ({
-  id,
-  image, title, amount, unit,
+  id, image, title, amount, unit,
 }) => {
   const dispatch = useDispatch();
   const getButtonId = (buttonId) => {
@@ -36,9 +34,6 @@ const MealsItem = ({
                   <span>{unit}</span>
                 </p>
               </span>
-              <div className="arrow-img">
-                <img src={arrowImage} alt="arrow" />
-              </div>
             </div>
           </div>
         </button>

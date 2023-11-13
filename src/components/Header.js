@@ -8,7 +8,7 @@ const Header = () => {
   const { error } = useSelector((state) => state.meals);
   const dispatch = useDispatch();
   const [searchValue, setSearchValue] = useState(''); // Add state to store the search input value
-  console.log(searchValue);
+  // console.log(searchValue);
   const handleSearchMeals = (e) => {
     e.preventDefault();
     dispatch(searchDataFromServer(searchValue));
