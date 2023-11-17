@@ -1,7 +1,8 @@
-import React, { useState } from 'react'; // Import React and useState
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import mealLogo from '../asset/meal logo.png';
 import { searchDataFromServer } from '../redux/Meals/MealSlice';
+import mealPot from '../asset/mealPot.svg';
+import searchIcon from '../asset/search.png';
 import '../modules/Header.css';
 
 const Header = () => {
@@ -17,15 +18,16 @@ const Header = () => {
 
   return (
     <header>
-      <div className="header-left">
-        <img src={mealLogo} alt="meal logo" style={{ width: '40px' }} />
-        <h1>Ayk foods</h1>
+      <div className="header-intro">
+        <h1>Menu</h1>
+        <img alt="meal" src={mealPot} style={{ backgroundColor: 'rgba(11, 127, 171)' }} />
       </div>
       <form id="form-input" onSubmit={handleSearchMeals}>
-        {/* Use value and onChange to manage the input field */}
+
+        <img src={searchIcon} alt="mealSearch" />
         <input
           type="text"
-          placeholder="search meal recipe by name"
+          placeholder="search"
           id="user-input"
           name="searchInput"
           value={searchValue}
